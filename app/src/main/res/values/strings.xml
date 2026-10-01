@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">RAS-Chitato</string>
+    <string name="subjudul">Project Pemrograman Mobile – Raihan Ahmada Siahaan</string>
+    <string name="my_project">My Project</string>
+    <string name="kembali">Kembali</string>
+    <string name="desc_gambar">Gambar keripik kentang Chitato</string>
+
+    <!-- Halaman detail snack -->
+    <string name="nama_snack">Chitato Sapi Panggang</string>
+    <string name="judul_deskripsi">Tentang Snack</string>
+    <string name="deskripsi_snack">Chitato adalah keripik kentang bergelombang produksi Indofood Fritolay Makmur yang dibuat dari irisan kentang asli lalu digoreng dan diberi bumbu. Varian Sapi Panggang merupakan rasa paling populer dengan cita rasa gurih daging sapi panggang.</string>
+    <string name="judul_gizi">Informasi Nilai Gizi</string>
+    <string name="judul_komposisi">Komposisi</string>
+    <string name="komposisi">Kentang (62%), minyak olein kelapa sawit, bumbu rasa sapi panggang (mengandung gula, garam, penguat rasa mononatrium glutamat, susu bubuk, penguat rasa dinatrium guanilat dan dinatrium inosinat, antioksidan asam askorbat, alfa tokoferol dan BHA, kedelai, gandum), ekstrak daging sapi (0,01%).\n\nMengandung alergen: susu, kedelai, dan gandum.</string>
+
+    <!-- Tabel gizi (per sajian 20 g) -->
+    <string name="takaran">Takaran saji</string>
+    <string name="nilai_takaran">20 g</string>
+    <string name="energi">Energi total</string>
+    <string name="nilai_energi">110 kkal</string>
+    <string name="energi_lemak">Energi dari lemak</string>
+    <string name="nilai_energi_lemak">60 kkal</string>
+    <string name="lemak_total">Lemak total</string>
+    <string name="nilai_lemak_total">6 g (9% AKG)</string>
+    <string name="lemak_jenuh">Lemak jenuh</string>
+    <string name="nilai_lemak_jenuh">3 g (14% AKG)</string>
+    <string name="protein">Protein</string>
+    <string name="nilai_protein">2 g (3% AKG)</string>
+    <string name="karbohidrat">Karbohidrat total</string>
+    <string name="nilai_karbohidrat">11 g (3% AKG)</string>
+    <string name="gula">Gula</string>
+    <string name="nilai_gula">0 g</string>
+    <string name="natrium">Natrium</string>
+    <string name="nilai_natrium">115 mg (8% AKG)</string>
+</resources>
