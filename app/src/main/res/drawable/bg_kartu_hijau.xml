@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Kartu hijau seperti Kartu Anggota di desain Profil -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="315"
+        android:startColor="@color/hijau_utama"
+        android:endColor="@color/hijau_tua" />
+    <corners android:radius="24dp" />
+</shape>

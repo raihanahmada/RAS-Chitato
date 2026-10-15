@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar"
+    tools:context=".ProfilDeveloperActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- Bar atas: tombol kembali + judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="12dp">
+
+            <ImageButton
+                android:id="@+id/btnKembali"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_ikon_bulat"
+                android:contentDescription="@string/kembali"
+                android:src="@drawable/ic_kembali"
+                app:tint="@color/teks_gelap" />
+
+            <TextView
+                style="@style/Teks.Judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="@string/profil_judul"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <!-- Kartu identitas hijau (gaya Kartu Anggota SIKUDA) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_kartu_hijau"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/bg_badge"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/profil_inisial"
+                android:textColor="@color/hijau_tua"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/profil_nama"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/profil_nim"
+                    android:textColor="@color/putih_redup"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_badge"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/profil_peran"
+                    android:textColor="@color/hijau_tua"
+                    android:textSize="11sp"
+                    app:drawableStartCompat="@drawable/ic_kode"
+                    app:drawableTint="@color/hijau_utama" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/profil_tentang_judul"
+            android:textSize="16sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Kartu.Putih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Teks.Isi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:padding="16dp"
+                android:text="@string/profil_tentang"
+                android:textColor="@color/teks_gelap" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profil_sosmed_judul"
+            android:textSize="16sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Kartu.Putih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="4dp">
+
+                <LinearLayout
+                    android:id="@+id/rowGithub"
+                    style="@style/Sosmed.Baris">
+
+                    <ImageView
+                        style="@style/Sosmed.Ikon"
+                        android:backgroundTint="@color/garis"
+                        android:src="@drawable/ic_github"
+                        app:tint="@color/teks_gelap" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_github" />
+
+                        <TextView
+                            style="@style/Teks.Isi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_github_isi" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron_kanan"
+                        app:tint="@color/teks_abu" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/garis" />
+
+                <LinearLayout
+                    android:id="@+id/rowInstagram"
+                    style="@style/Sosmed.Baris">
+
+                    <ImageView
+                        style="@style/Sosmed.Ikon"
+                        android:backgroundTint="@color/oranye_muda"
+                        android:src="@drawable/ic_instagram"
+                        app:tint="@color/oranye_tbs" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_instagram" />
+
+                        <TextView
+                            style="@style/Teks.Isi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_instagram_isi" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron_kanan"
+                        app:tint="@color/teks_abu" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/garis" />
+
+                <LinearLayout
+                    android:id="@+id/rowEmail"
+                    style="@style/Sosmed.Baris">
+
+                    <ImageView
+                        style="@style/Sosmed.Ikon"
+                        android:backgroundTint="@color/hijau_muda"
+                        android:src="@drawable/ic_email"
+                        app:tint="@color/hijau_utama" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_email" />
+
+                        <TextView
+                            style="@style/Teks.Isi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sosmed_email_isi" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron_kanan"
+                        app:tint="@color/teks_abu" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profil_hobi_judul"
+            android:textSize="16sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="6dp">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/ic_hati"
+                        android:text="@string/hobi_1" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/ic_hati"
+                        android:text="@string/hobi_2" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profil_kekuatan_judul"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_ikon_bulat"
+            android:backgroundTint="@color/kuning_muda"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_ikon_bulat"
+                android:backgroundTint="@color/kuning_dana"
+                android:importantForAccessibility="no"
+                android:padding="10dp"
+                android:src="@drawable/ic_bintang"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/Teks.Isi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/profil_kekuatan"
+                android:textColor="#78350F" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profil_skill_judul"
+            android:textSize="16sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="6dp">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_1" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_2" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_3" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_4" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Chip.Sikuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_5" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profil_palet_judul"
+            android:textSize="16sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Kartu.Putih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/hijau_tua" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_hijau_tua" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/hijau_utama" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_hijau_utama" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/hijau_muda" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_hijau_muda" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/oranye_tbs" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_oranye_tbs" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/kuning_dana" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_kuning_dana" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/Palet.Warna"
+                            android:backgroundTint="@color/teks_gelap" />
+
+                        <TextView
+                            style="@style/Palet.Label"
+                            android:text="@string/hex_teks_gelap" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Teks.Isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/profil_font"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
