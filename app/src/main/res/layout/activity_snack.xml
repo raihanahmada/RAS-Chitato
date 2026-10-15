@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream"
+    android:background="@color/latar"
     tools:context=".SnackActivity">
 
     <LinearLayout
@@ -20,7 +21,7 @@
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"
             android:text="@string/nama_snack"
-            android:textColor="@color/merah_chitato"
+            android:textColor="@color/hijau_utama"
             android:textSize="26sp" />
 
         <ImageView
@@ -38,7 +39,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/judul_deskripsi"
-            android:textColor="@color/abu_gelap"
+            android:textColor="@color/teks_gelap"
             android:textSize="18sp" />
 
         <TextView
@@ -49,7 +50,7 @@
             android:fontFamily="@font/poppins_regular"
             android:lineSpacingExtra="4dp"
             android:text="@string/deskripsi_snack"
-            android:textColor="@color/abu_gelap"
+            android:textColor="@color/teks_gelap"
             android:textSize="14sp" />
 
         <TextView
@@ -58,11 +59,10 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/judul_gizi"
-            android:textColor="@color/abu_gelap"
+            android:textColor="@color/teks_gelap"
             android:textSize="18sp" />
 
         <androidx.cardview.widget.CardView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -76,7 +76,7 @@
                 android:background="@color/white"
                 android:stretchColumns="0">
 
-                <TableRow android:background="@color/krem_gelap"
+                <TableRow android:background="@color/hijau_muda"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp">
 
@@ -86,7 +86,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/takaran"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_takaran"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -108,7 +108,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/energi"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -116,11 +116,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_energi"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
-                <TableRow android:background="@color/krem_gelap"
+                <TableRow android:background="@color/hijau_muda"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp">
 
@@ -130,7 +130,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/energi_lemak"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -138,7 +138,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_energi_lemak"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -152,7 +152,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/lemak_total"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -160,11 +160,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_lemak_total"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
-                <TableRow android:background="@color/krem_gelap"
+                <TableRow android:background="@color/hijau_muda"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp">
 
@@ -174,7 +174,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/lemak_jenuh"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -182,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_lemak_jenuh"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -196,7 +196,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/protein"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -204,11 +204,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_protein"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
-                <TableRow android:background="@color/krem_gelap"
+                <TableRow android:background="@color/hijau_muda"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp">
 
@@ -218,7 +218,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/karbohidrat"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -226,7 +226,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_karbohidrat"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -240,7 +240,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/gula"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -248,11 +248,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_gula"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
-                <TableRow android:background="@color/krem_gelap"
+                <TableRow android:background="@color/hijau_muda"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp">
 
@@ -262,7 +262,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/natrium"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
 
                     <TextView
@@ -270,7 +270,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:text="@string/nilai_natrium"
-                        android:textColor="@color/abu_gelap"
+                        android:textColor="@color/teks_gelap"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -283,7 +283,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/judul_komposisi"
-            android:textColor="@color/abu_gelap"
+            android:textColor="@color/teks_gelap"
             android:textSize="18sp" />
 
         <TextView
@@ -294,18 +294,19 @@
             android:fontFamily="@font/poppins_regular"
             android:lineSpacingExtra="4dp"
             android:text="@string/komposisi"
-            android:textColor="@color/abu_gelap"
+            android:textColor="@color/teks_gelap"
             android:textSize="13sp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnKembali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="@color/merah_chitato"
+            android:backgroundTint="@color/hijau_utama"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/kembali"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:cornerRadius="16dp" />
 
     </LinearLayout>
 </ScrollView>

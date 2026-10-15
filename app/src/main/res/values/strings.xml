@@ -1,9 +1,84 @@
 <resources>
     <string name="app_name">RAS-Chitato</string>
-    <string name="subjudul">Project Pemrograman Mobile – Raihan Ahmada Siahaan</string>
-    <string name="my_project">My Project</string>
     <string name="kembali">Kembali</string>
     <string name="desc_gambar">Gambar keripik kentang Chitato</string>
+    <string name="desc_logo">Logo SIKUDA Mobile</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_nama">SIKUDA</string>
+    <string name="splash_mobile">MOBILE</string>
+    <string name="slogan">Koperasi Sawit di Genggaman Petani</string>
+    <string name="splash_kud">KUD Lubuk Karya · Dharmasraya</string>
+    <string name="splash_versi">v1.0.0</string>
+
+    <!-- Login (AuthActivity) -->
+    <string name="login_nama_app">SIKUDA Mobile</string>
+    <string name="login_judul">Masuk</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Kata Sandi</string>
+    <string name="hint_username">Masukkan username</string>
+    <string name="hint_password">Masukkan kata sandi</string>
+    <string name="tombol_masuk">Masuk</string>
+    <string name="login_footer">Tugas Pertemuan 6 · Pemrograman Mobile</string>
+    <string name="error_username_kosong">Username wajib diisi</string>
+    <string name="error_password_kosong">Kata sandi wajib diisi</string>
+    <string name="login_gagal_judul">Login Gagal</string>
+    <string name="login_gagal_pesan">Silahkan coba lagi</string>
+    <string name="ok">OK</string>
+
+    <!-- Beranda (MainActivity) -->
+    <string name="sapaan">Selamat datang,</string>
+    <string name="sesi_judul">Sesi login tersimpan</string>
+    <string name="sesi_isi">isLogin = true disimpan di SharedPreferences \"user_pref\". Tutup lalu buka lagi aplikasi, kamu langsung masuk ke halaman ini.</string>
+    <string name="menu_judul">Menu</string>
+    <string name="menu_snack_judul">My Project</string>
+    <string name="menu_snack_isi">Detail snack Chitato Sapi Panggang</string>
+    <string name="menu_profil_judul">Profil Developer</string>
+    <string name="menu_profil_isi">Kenalan dengan pembuat aplikasi</string>
+    <string name="tombol_keluar">Keluar</string>
+    <string name="logout_judul">Keluar</string>
+    <string name="logout_pesan">Yakin ingin keluar? Data sesi login akan dihapus.</string>
+    <string name="ya">Ya</string>
+    <string name="batal">Batal</string>
+
+    <!-- Profil Developer -->
+    <string name="profil_judul">Profil Developer</string>
+    <string name="profil_inisial">RA</string>
+    <string name="profil_nama">Raihan Ahmada Siahaan</string>
+    <string name="profil_nim">NIM 2455301234 · Kelas 2 TI G</string>
+    <string name="profil_peran">Android Developer · Kotlin</string>
+    <string name="profil_tentang_judul">Tentang Saya</string>
+    <string name="profil_tentang">Mahasiswa Teknik Informatika yang sedang membangun SIKUDA Mobile, aplikasi koperasi sawit untuk anggota KUD Lubuk Karya. Suka mengubah proses manual jadi aplikasi yang mudah dipakai.</string>
+    <string name="profil_sosmed_judul">Sosial Media &amp; Kontak</string>
+    <string name="sosmed_github">GitHub</string>
+    <string name="sosmed_github_isi">github.com/raihanahmada</string>
+    <string name="link_github">https://github.com/raihanahmada</string>
+    <string name="sosmed_instagram">Instagram</string>
+    <string name="sosmed_instagram_isi">@raihanahmada_</string>
+    <string name="link_instagram">https://instagram.com/raihanahmada_</string>
+    <string name="sosmed_email">Email</string>
+    <string name="sosmed_email_isi">raihanahmada0802@gmail.com</string>
+    <string name="link_email">mailto:raihanahmada0802@gmail.com</string>
+    <string name="profil_hobi_judul">Hobi</string>
+    <string name="hobi_1">Main Game</string>
+    <string name="hobi_2">Ngoding</string>
+    <string name="profil_kekuatan_judul">Kekuatan Terbesar</string>
+    <string name="profil_kekuatan">Konsisten di hal-hal kecil.</string>
+    <string name="profil_skill_judul">Keahlian</string>
+    <string name="skill_1">Kotlin</string>
+    <string name="skill_2">XML Layout</string>
+    <string name="skill_3">Android Studio</string>
+    <string name="skill_4">Git &amp; GitHub</string>
+    <string name="skill_5">UI Design</string>
+    <string name="profil_palet_judul">Palet &amp; Font Aplikasi</string>
+    <string name="profil_font">Poppins Bold untuk judul · Poppins Regular untuk isi</string>
+    <string name="hex_hijau_tua" translatable="false">#0B6B35</string>
+    <string name="hex_hijau_utama" translatable="false">#16A34A</string>
+    <string name="hex_hijau_muda" translatable="false">#DCFCE7</string>
+    <string name="hex_oranye_tbs" translatable="false">#F0662A</string>
+    <string name="hex_kuning_dana" translatable="false">#F59E0B</string>
+    <string name="hex_teks_gelap" translatable="false">#0F172A</string>
+    <string name="link_gagal">Tidak ada aplikasi untuk membuka tautan ini</string>
 
     <!-- Halaman detail snack -->
     <string name="nama_snack">Chitato Sapi Panggang</string>
@@ -21,15 +96,15 @@
     <string name="energi_lemak">Energi dari lemak</string>
     <string name="nilai_energi_lemak">60 kkal</string>
     <string name="lemak_total">Lemak total</string>
-    <string name="nilai_lemak_total">6 g (9% AKG)</string>
+    <string name="nilai_lemak_total" formatted="false">6 g (9% AKG)</string>
     <string name="lemak_jenuh">Lemak jenuh</string>
-    <string name="nilai_lemak_jenuh">3 g (14% AKG)</string>
+    <string name="nilai_lemak_jenuh" formatted="false">3 g (14% AKG)</string>
     <string name="protein">Protein</string>
-    <string name="nilai_protein">2 g (3% AKG)</string>
+    <string name="nilai_protein" formatted="false">2 g (3% AKG)</string>
     <string name="karbohidrat">Karbohidrat total</string>
-    <string name="nilai_karbohidrat">11 g (3% AKG)</string>
+    <string name="nilai_karbohidrat" formatted="false">11 g (3% AKG)</string>
     <string name="gula">Gula</string>
     <string name="nilai_gula">0 g</string>
     <string name="natrium">Natrium</string>
-    <string name="nilai_natrium">115 mg (8% AKG)</string>
+    <string name="nilai_natrium" formatted="false">115 mg (8% AKG)</string>
 </resources>

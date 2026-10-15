@@ -2,9 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="merah_chitato">#D71920</color>
-    <color name="kuning_kentang">#F2B83A</color>
-    <color name="cream">#FFF8E7</color>
-    <color name="krem_gelap">#FDEFD0</color>
-    <color name="abu_gelap">#333333</color>
+
+    <!-- Palet SIKUDA Mobile (Grand Desain Pertemuan 5) -->
+    <color name="hijau_tua">#0B6B35</color>
+    <color name="hijau_utama">#16A34A</color>
+    <color name="hijau_daun">#86EFAC</color>
+    <color name="hijau_muda">#DCFCE7</color>
+    <color name="oranye_tbs">#F0662A</color>
+    <color name="oranye_muda">#FFEDD5</color>
+    <color name="kuning_dana">#F59E0B</color>
+    <color name="kuning_muda">#FEF3C7</color>
+    <color name="merah_bahaya">#DC2626</color>
+    <color name="merah_muda">#FEE2E2</color>
+    <color name="teks_gelap">#0F172A</color>
+    <color name="teks_abu">#64748B</color>
+    <color name="garis">#E2E8F0</color>
+    <color name="latar">#F6F8F5</color>
+    <color name="putih_transparan">#26FFFFFF</color>
+    <color name="putih_redup">#CCFFFFFF</color>
 </resources>

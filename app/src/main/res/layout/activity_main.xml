@@ -1,67 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream"
+    android:background="@color/latar"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:contentDescription="@string/desc_gambar"
-        android:src="@drawable/chitato"
-        app:layout_constraintBottom_toTopOf="@+id/txtJudul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-        android:id="@+id/txtJudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/app_name"
-        android:textColor="@color/merah_chitato"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtSubjudul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
-
-    <TextView
-        android:id="@+id/txtSubjudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/subjudul"
-        android:textColor="@color/abu_gelap"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnMyProject"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtJudul" />
-
-    <Button
-        android:id="@+id/btnMyProject"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/merah_chitato"
-        android:fontFamily="@font/poppins_bold"
-        android:paddingVertical="12dp"
-        android:text="@string/my_project"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSubjudul" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Header hijau: sapaan + username dari SharedPreferences -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_hijau"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtInisial"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_ikon_bulat"
+                    android:backgroundTint="@color/kuning_muda"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:textColor="#92400E"
+                    android:textSize="20sp"
+                    tools:text="R" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/sapaan"
+                        android:textColor="@color/putih_redup"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:text="raihan" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="@string/desc_logo"
+                    android:src="@drawable/ic_logo_sikuda" />
+            </LinearLayout>
+
+            <!-- Info status sesi login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_kaca"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_cek"
+                    app:tint="@color/hijau_daun" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/sesi_judul"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/sesi_isi"
+                        android:textColor="@color/putih_redup"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Teks.Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/menu_judul" />
+
+        <!-- Menu 1: My Project (detail snack) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnMyProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/garis"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_ikon_bulat"
+                    android:backgroundTint="@color/oranye_muda"
+                    android:contentDescription="@string/desc_gambar"
+                    android:padding="6dp"
+                    android:src="@drawable/chitato" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Teks.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_snack_judul"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Teks.Isi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_snack_isi" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_kanan"
+                    app:tint="@color/teks_abu" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu 2: Profil Developer -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnProfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/garis"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_ikon_bulat"
+                    android:backgroundTint="@color/hijau_muda"
+                    android:importantForAccessibility="no"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/hijau_tua" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Teks.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_profil_judul"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Teks.Isi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_profil_isi" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_kanan"
+                    app:tint="@color/teks_abu" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="24dp" />
+
+        <!-- Tombol Logout -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/tombol_keluar"
+            android:textColor="@color/merah_bahaya"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart"
+            app:iconTint="@color/merah_bahaya"
+            app:strokeColor="@color/merah_muda"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+</ScrollView>

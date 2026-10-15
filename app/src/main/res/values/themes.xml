@@ -1,9 +1,140 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RASChitato" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.RASChitato" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Warna mengikuti palet SIKUDA Mobile -->
+        <item name="colorPrimary">@color/hijau_utama</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/hijau_muda</item>
+        <item name="colorOnPrimaryContainer">@color/hijau_tua</item>
+        <item name="colorSecondary">@color/oranye_tbs</item>
+        <item name="colorError">@color/merah_bahaya</item>
+        <item name="android:colorBackground">@color/latar</item>
+        <!-- Dialog & permukaan putih (bawaan M3 keunguan) -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorSurfaceContainerHigh">@color/white</item>
+        <item name="colorOnSurface">@color/teks_gelap</item>
+        <item name="colorOnSurfaceVariant">@color/teks_abu</item>
+        <item name="materialAlertDialogTheme">@style/Dialog.Sikuda</item>
+        <!-- Cukup android:fontFamily; atribut app fontFamily di tema akan menimpa font Bold di layout -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 
     <style name="Theme.RASChitato" parent="Base.Theme.RASChitato" />
+
+    <!-- AlertDialog: latar putih, judul Poppins Bold -->
+    <style name="Dialog.Sikuda" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/Dialog.Sikuda.Kotak</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Dialog.Sikuda.Judul</item>
+    </style>
+
+    <style name="Dialog.Sikuda.Kotak" parent="MaterialAlertDialog.Material3">
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+    <style name="Dialog.Sikuda.Judul" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/teks_gelap</item>
+    </style>
+
+    <!-- Teks judul & isi (Poppins Bold / Poppins Regular) -->
+    <style name="Teks.Judul" parent="">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/teks_gelap</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Teks.Isi" parent="">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/teks_abu</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Teks.Label" parent="">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/teks_gelap</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Kolom input membulat seperti desain Login SIKUDA -->
+    <style name="Input.Sikuda" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeColor">@color/hijau_utama</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="startIconTint">@color/teks_abu</item>
+        <item name="endIconTint">@color/teks_abu</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <!-- Kartu putih polos dengan garis tipis -->
+    <style name="Kartu.Putih" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="strokeColor">@color/garis</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Chip hobi & keahlian (hanya label, tidak bisa diklik) -->
+    <style name="Chip.Sikuda" parent="Widget.Material3.Chip.Assist">
+        <item name="android:clickable">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/hijau_tua</item>
+        <item name="chipBackgroundColor">@color/hijau_muda</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipCornerRadius">100dp</item>
+        <item name="chipIconTint">@color/hijau_utama</item>
+    </style>
+
+    <!-- Lingkaran contoh warna di bagian Palet -->
+    <style name="Palet.Warna" parent="">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_ikon_bulat</item>
+    </style>
+
+    <style name="Palet.Label" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/teks_abu</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Baris sosmed -->
+    <style name="Sosmed.Baris" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <style name="Sosmed.Ikon" parent="">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/bg_ikon_bulat</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <!-- Tombol utama hijau -->
+    <style name="Tombol.Hijau" parent="Widget.Material3.Button">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/hijau_utama</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
 </resources>
