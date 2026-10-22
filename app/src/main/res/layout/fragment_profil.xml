@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar"
+    tools:context=".profil.ProfilFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.Sikuda"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+
+            <!-- Kartu user yang sedang login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_kartu_hijau"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txtInisial"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_badge"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:textColor="@color/hijau_tua"
+                    android:textSize="24sp"
+                    tools:text="R" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:text="raihan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/profil_anggota"
+                        android:textColor="@color/putih_redup"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_badge"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="3dp"
+                        android:text="@string/kartu_aktif"
+                        android:textColor="@color/hijau_tua"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Daftar menu akun -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Kartu.Putih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/btnKartuSaya"
+                        style="@style/Sosmed.Baris">
+
+                        <ImageView
+                            style="@style/Sosmed.Ikon"
+                            android:backgroundTint="@color/hijau_muda"
+                            android:src="@drawable/ic_nav_kartu"
+                            app:tint="@color/hijau_tua" />
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/profil_menu_kartu"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_chevron_kanan"
+                            app:tint="@color/teks_abu" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@color/garis" />
+
+                    <LinearLayout
+                        android:id="@+id/btnProfilDeveloper"
+                        style="@style/Sosmed.Baris">
+
+                        <ImageView
+                            style="@style/Sosmed.Ikon"
+                            android:backgroundTint="@color/oranye_muda"
+                            android:src="@drawable/ic_kode"
+                            app:tint="@color/oranye_tbs" />
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/profil_menu_developer"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_chevron_kanan"
+                            app:tint="@color/teks_abu" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@color/garis" />
+
+                    <LinearLayout
+                        android:id="@+id/btnLogout"
+                        style="@style/Sosmed.Baris">
+
+                        <ImageView
+                            style="@style/Sosmed.Ikon"
+                            android:backgroundTint="@color/merah_muda"
+                            android:src="@drawable/ic_logout"
+                            app:tint="@color/merah_bahaya" />
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/tombol_keluar"
+                            android:textColor="@color/merah_bahaya"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Teks.Isi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/profil_versi"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

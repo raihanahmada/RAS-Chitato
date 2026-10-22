@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/latar"
-    tools:context=".SnackActivity">
+    tools:context=".beranda.SnackActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

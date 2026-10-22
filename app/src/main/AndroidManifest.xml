@@ -25,14 +25,15 @@
             android:name=".AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <!-- BaseActivity: wadah Fragment + Bottom Navigation (pengganti MainActivity) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".SnackActivity"
+            android:name=".beranda.SnackActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilDeveloperActivity"
+            android:name=".profil.ProfilDeveloperActivity"
             android:exported="false" />
     </application>
 

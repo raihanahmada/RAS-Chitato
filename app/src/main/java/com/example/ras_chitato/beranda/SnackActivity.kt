@@ -1,4 +1,4 @@
-package com.example.ras_chitato
+package com.example.ras_chitato.beranda
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -22,7 +22,7 @@ class SnackActivity : AppCompatActivity() {
             insets
         }
 
-        // Tombol kembali ke MainActivity
+        // Tombol kembali ke BaseActivity (menu sebelumnya)
         binding.btnKembali.setOnClickListener {
             finish()
         }

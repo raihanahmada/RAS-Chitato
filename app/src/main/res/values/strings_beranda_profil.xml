@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BerandaFragment -->
+    <string name="cepat_tbs">Setoran TBS</string>
+    <string name="cepat_kartu">Kartu QR</string>
+    <string name="cepat_simpanan">Simpanan</string>
+    <string name="beranda_harga_label">Harga TBS hari ini</string>
+    <string name="beranda_harga">Rp 2.850/kg</string>
+    <string name="beranda_harga_naik">▲ Rp 50</string>
+    <string name="beranda_praktikum">Project Praktikum</string>
+
+    <!-- ProfilFragment -->
+    <string name="profil_fragment_judul">Profil</string>
+    <string name="profil_anggota">Anggota KUD Lubuk Karya</string>
+    <string name="profil_menu_kartu">Kartu Anggota Saya</string>
+    <string name="profil_menu_developer">Profil Developer</string>
+    <string name="profil_versi">SIKUDA Mobile v1.0.0 · RAS-Chitato</string>
+</resources>

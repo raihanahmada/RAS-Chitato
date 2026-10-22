@@ -1,4 +1,4 @@
-package com.example.ras_chitato
+package com.example.ras_chitato.profil
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.ras_chitato.R
 import com.example.ras_chitato.databinding.ActivityProfilDeveloperBinding
 
 class ProfilDeveloperActivity : AppCompatActivity() {
@@ -26,7 +27,7 @@ class ProfilDeveloperActivity : AppCompatActivity() {
             insets
         }
 
-        // Tombol kembali ke MainActivity
+        // Tombol kembali ke BaseActivity (menu sebelumnya)
         binding.btnKembali.setOnClickListener {
             finish()
         }

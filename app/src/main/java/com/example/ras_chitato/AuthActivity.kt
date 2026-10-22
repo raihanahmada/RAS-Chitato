@@ -54,7 +54,7 @@ class AuthActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.apply()
 
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
