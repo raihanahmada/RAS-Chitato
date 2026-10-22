@@ -137,4 +137,37 @@
         <item name="backgroundTint">@color/hijau_utama</item>
         <item name="cornerRadius">16dp</item>
     </style>
+
+    <!-- Toolbar di setiap Fragment: latar terang, judul Poppins Bold -->
+    <style name="Toolbar.Sikuda" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/latar</item>
+        <item name="titleTextAppearance">@style/Teks.JudulToolbar</item>
+        <item name="titleTextColor">@color/teks_gelap</item>
+        <item name="contentInsetStart">24dp</item>
+    </style>
+
+    <!-- Toolbar Beranda menyatu dengan header hijau -->
+    <style name="Toolbar.Sikuda.Hijau">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="Teks.JudulToolbar" parent="TextAppearance.Material3.TitleLarge">
+        <!-- Style M3 memakai fontFamily (app), jadi keduanya diisi -->
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- Label status kecil (Diproses / Dibayar) -->
+    <style name="Teks.Status" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_badge</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">2dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

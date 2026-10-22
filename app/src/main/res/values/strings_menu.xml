@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TbsFragment -->
+    <string name="tbs_judul">Setoran TBS</string>
+    <string name="tbs_harga_label">Harga TBS hari ini · 1 Okt 2026</string>
+    <string name="tbs_harga">Rp 2.850</string>
+    <string name="tbs_per_kg">/kg</string>
+    <string name="tbs_harga_naik" formatted="false">▲ 1,8%</string>
+    <string name="tbs_harga_ket">Ditetapkan pengurus KUD Lubuk Karya</string>
+    <string name="tbs_berat_label">Berat bulan ini</string>
+    <string name="tbs_berat">2.410 kg</string>
+    <string name="tbs_berat_ket" formatted="false">▲ 12% dari Agt</string>
+    <string name="tbs_pendapatan_label">Pendapatan</string>
+    <string name="tbs_pendapatan">Rp 6,8 jt</string>
+    <string name="tbs_pendapatan_ket">2 kali setor</string>
+    <string name="tbs_riwayat">Riwayat Setoran</string>
+    <string name="status_diproses">Diproses</string>
+    <string name="status_dibayar">Dibayar</string>
+
+    <!-- KartuFragment -->
+    <string name="kartu_judul">Kartu Anggota</string>
+    <string name="kartu_kop">KARTU ANGGOTA\nKUD LUBUK KARYA</string>
+    <string name="kartu_nomor">No. Anggota KUD-LK-0142</string>
+    <string name="kartu_sejak">Anggota sejak Mar 2019 · 2 kavling · 4 ha</string>
+    <string name="kartu_aktif">● AKTIF</string>
+    <string name="kartu_qr_judul">QR Kartu Anggota</string>
+    <string name="kartu_qr_ket">Tunjukkan QR ini ke petugas timbangan saat setor TBS</string>
+    <string name="desc_qr">Kode QR kartu anggota</string>
+
+    <!-- SimpananFragment -->
+    <string name="simpanan_judul">Simpanan Saya</string>
+    <string name="simpanan_saldo_label">Saldo simpanan</string>
+    <string name="simpanan_saldo">Rp 1.850.000</string>
+    <string name="simpanan_pokok_label">Pokok</string>
+    <string name="simpanan_pokok">Rp 100.000</string>
+    <string name="simpanan_wajib_label">Wajib</string>
+    <string name="simpanan_wajib">Rp 1.750.000</string>
+    <string name="simpanan_mutasi">Mutasi</string>
+</resources>

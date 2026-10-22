@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Satu baris mutasi simpanan (diisi dari SimpananFragment) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp">
+
+    <ImageView
+        android:id="@+id/imgArah"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_ikon_bulat"
+        android:importantForAccessibility="no"
+        android:padding="12dp"
+        tools:backgroundTint="@color/hijau_muda"
+        tools:src="@drawable/ic_masuk"
+        app:tint="@color/hijau_tua" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtJenis"
+            style="@style/Teks.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            tools:text="Simpanan Wajib" />
+
+        <TextView
+            android:id="@+id/txtKeterangan"
+            style="@style/Teks.Isi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="30 Sep 2026 · Potong TBS" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtJumlah"
+        style="@style/Teks.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="+Rp 50.000"
+        tools:textColor="@color/hijau_utama" />
+</LinearLayout>
