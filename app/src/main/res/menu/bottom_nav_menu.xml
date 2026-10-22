@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 5 menu utama SIKUDA Mobile (sesuai Grand Desain Pertemuan 5) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_beranda"
+        android:icon="@drawable/ic_nav_beranda"
+        android:title="@string/nav_beranda" />
+
+    <item
+        android:id="@+id/nav_tbs"
+        android:icon="@drawable/ic_nav_tbs"
+        android:title="@string/nav_tbs" />
+
+    <item
+        android:id="@+id/nav_kartu"
+        android:icon="@drawable/ic_nav_kartu"
+        android:title="@string/nav_kartu" />
+
+    <item
+        android:id="@+id/nav_simpanan"
+        android:icon="@drawable/ic_nav_simpanan"
+        android:title="@string/nav_simpanan" />
+
+    <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/ic_nav_profil"
+        android:title="@string/nav_profil" />
+</menu>

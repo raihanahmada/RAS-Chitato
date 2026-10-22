@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ikon & teks menu: hijau tua saat aktif, putih saat tidak aktif -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/hijau_tua" android:state_checked="true" />
+    <item android:color="@color/white" />
+</selector>

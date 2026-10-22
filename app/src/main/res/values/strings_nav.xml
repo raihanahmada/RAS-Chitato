@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Judul menu Bottom Navigation -->
+    <string name="nav_beranda">Beranda</string>
+    <string name="nav_tbs">TBS</string>
+    <string name="nav_kartu">Kartu</string>
+    <string name="nav_simpanan">Simpanan</string>
+    <string name="nav_profil">Profil</string>
+</resources>

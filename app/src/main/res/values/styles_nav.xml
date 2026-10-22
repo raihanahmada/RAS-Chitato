@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bottom Navigation SIKUDA: bar hijau membulat, menu aktif kotak hijau muda -->
+    <style name="Nav.Sikuda" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bg_bottom_nav</item>
+        <item name="itemBackground">@drawable/bg_item_nav</item>
+        <item name="itemIconTint">@color/warna_item_nav</item>
+        <item name="itemTextColor">@color/warna_item_nav</item>
+        <item name="itemActiveIndicatorStyle">@style/Nav.Sikuda.TanpaIndikator</item>
+        <item name="itemTextAppearanceActive">@style/Nav.Sikuda.Teks</item>
+        <item name="itemTextAppearanceInactive">@style/Nav.Sikuda.Teks</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemRippleColor">@color/putih_transparan</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Indikator bawaan M3 dimatikan, diganti itemBackground -->
+    <style name="Nav.Sikuda.TanpaIndikator" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="Nav.Sikuda.Teks" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>
