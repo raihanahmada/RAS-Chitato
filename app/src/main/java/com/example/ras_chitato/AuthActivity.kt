@@ -8,6 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.doAfterTextChanged
 import com.example.ras_chitato.databinding.ActivityAuthBinding
+import com.example.ras_chitato.registrasi.InputEmailActivity
+import com.example.ras_chitato.registrasi.RegistrasiActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AuthActivity : AppCompatActivity() {
@@ -28,9 +30,17 @@ class AuthActivity : AppCompatActivity() {
         //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
+        // Data akun hasil Registrasi (file terpisah agar tidak ikut terhapus saat logout)
+        val akunPref = getSharedPreferences(RegistrasiActivity.PREF_AKUN, MODE_PRIVATE)
+
         // Hapus pesan error saat user mulai mengetik ulang
         binding.inputUsername.doAfterTextChanged { binding.layoutUsername.error = null }
         binding.inputPassword.doAfterTextChanged { binding.layoutPassword.error = null }
+
+        // Soal 1: tombol Register With Gmail -> halaman input email
+        binding.btnRegisterGmail.setOnClickListener {
+            startActivity(Intent(this, InputEmailActivity::class.java))
+        }
 
         binding.btnLogin.setOnClickListener {
             val username = binding.inputUsername.text.toString().trim()
@@ -46,8 +56,16 @@ class AuthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // 2) Autentikasi: login berhasil jika username sama dengan password
-            if (username == password) {
+            // 2) Autentikasi, boleh masuk jika salah satu kondisi terpenuhi:
+            //    a. username == password (dari laporan sebelumnya)
+            //    b. username & password sama dengan data registrasi di SharedPreferences
+            val usernameTersimpan = akunPref.getString(RegistrasiActivity.KEY_USERNAME, null)
+            val passwordTersimpan = akunPref.getString(RegistrasiActivity.KEY_PASSWORD, null)
+            val cocokDataRegistrasi = usernameTersimpan != null &&
+                    username == usernameTersimpan &&
+                    password == passwordTersimpan
+
+            if (username == password || cocokDataRegistrasi) {
                 // Simpan status login & username ke SharedPreferences
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
@@ -58,7 +76,7 @@ class AuthActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                // 3) Gagal: tampilkan AlertDialog
+                // 3) Gagal: tampilkan MaterialAlertDialog
                 MaterialAlertDialogBuilder(this)
                     .setTitle(R.string.login_gagal_judul)
                     .setMessage(R.string.login_gagal_pesan)

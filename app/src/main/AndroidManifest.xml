@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RASChitato">
+
         <!-- SplashScreenActivity jadi halaman pertama (LAUNCHER) -->
         <activity
             android:name=".SplashScreenActivity"
@@ -35,6 +36,18 @@
         <activity
             android:name=".profil.ProfilDeveloperActivity"
             android:exported="false" />
+        <activity
+            android:name=".registrasi.InputEmailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".registrasi.RegistrasiActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".registrasi.RegistrasiBerhasilActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

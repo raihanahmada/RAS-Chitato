@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_hijau"
+    android:fillViewport="true"
+    tools:context=".registrasi.RegistrasiBerhasilActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bg_ikon_bulat"
+                    android:backgroundTint="@color/hijau_muda"
+                    android:importantForAccessibility="no"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_cek"
+                    app:tint="@color/hijau_utama" />
+
+                <TextView
+                    style="@style/Teks.Judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/berhasil_judul"
+                    android:textSize="22sp" />
+
+                <TextView
+                    style="@style/Teks.Isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/berhasil_pesan" />
+
+                <!-- Ringkasan data yang tersimpan di SharedPreferences -->
+                <TextView
+                    android:id="@+id/txtDataAkun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_ikon_bulat"
+                    android:backgroundTint="@color/latar"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
+                    android:textColor="@color/teks_gelap"
+                    android:textSize="14sp"
+                    tools:text="Nama: Raihan\nEmail: raihan@gmail.com\nUsername: raihan" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKeLogin"
+                    style="@style/Tombol.Hijau"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/tombol_ke_login" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login: tombol Register With Gmail -->
+    <string name="atau">atau</string>
+    <string name="tombol_register_gmail">Register With Gmail</string>
+
+    <!-- InputEmailActivity -->
+    <string name="gmail_judul">Daftar dengan Gmail</string>
+    <string name="gmail_sub">Masukkan alamat Gmail kamu untuk melanjutkan pendaftaran</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">contoh@gmail.com</string>
+    <string name="tombol_lanjut">Lanjutkan</string>
+    <string name="email_gagal_judul">Email Tidak Valid</string>
+    <string name="error_email_kosong">Email tidak boleh kosong.</string>
+    <string name="error_email_gmail">Email harus menggunakan domain @gmail.com.</string>
+
+    <!-- RegistrasiActivity -->
+    <string name="registrasi_judul">Registrasi</string>
+    <string name="registrasi_sub">Lengkapi data akun SIKUDA kamu</string>
+    <string name="label_nama">Nama</string>
+    <string name="hint_nama">Masukkan nama lengkap</string>
+    <string name="helper_email">Terisi otomatis dari Register With Gmail</string>
+    <string name="tombol_registrasi">Registrasi</string>
+    <string name="error_nama_kosong">Nama wajib diisi</string>
+    <string name="error_email_registrasi">Email belum terisi, ulangi dari Register With Gmail</string>
+    <string name="error_username_spasi">Username tidak boleh mengandung spasi</string>
+    <string name="error_password_pendek">Kata sandi minimal 6 karakter</string>
+
+    <!-- RegistrasiBerhasilActivity -->
+    <string name="berhasil_judul">Registrasi Berhasil</string>
+    <string name="berhasil_pesan">Akun kamu sudah tersimpan. Silakan masuk dengan username dan kata sandi yang baru dibuat.</string>
+    <string name="berhasil_data">Nama: %1$s\nEmail: %2$s\nUsername: %3$s</string>
+    <string name="tombol_ke_login">Kembali ke Login</string>
+</resources>
