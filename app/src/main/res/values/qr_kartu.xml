@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fitur QR Code Kartu Anggota (ZXing) -->
+    <string name="nomor_anggota" translatable="false">KUD-LK-0142</string>
+    <string name="qr_isi">Isi QR: %1$s · %2$s</string>
+    <string name="qr_gagal">QR Code gagal dibuat</string>
+    <dimen name="ukuran_qr">200dp</dimen>
+</resources>

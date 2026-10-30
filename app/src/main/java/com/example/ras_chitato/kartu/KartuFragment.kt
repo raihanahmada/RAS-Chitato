@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.ras_chitato.R
 import com.example.ras_chitato.databinding.FragmentKartuBinding
+import com.google.zxing.WriterException
 
 class KartuFragment : Fragment() {
 
@@ -33,7 +34,22 @@ class KartuFragment : Fragment() {
 
         // Nama di kartu diambil dari username yang disimpan saat login
         val sharedPref = requireContext().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
-        binding.txtNamaAnggota.text = sharedPref.getString("username", "").orEmpty()
+        val username = sharedPref.getString("username", "").orEmpty()
+        binding.txtNamaAnggota.text = username
+
+        tampilkanQr(getString(R.string.nomor_anggota), username)
+    }
+
+    // QR berisi nomor anggota + username, dipindai petugas timbangan saat setor TBS
+    private fun tampilkanQr(nomorAnggota: String, username: String) {
+        val isiQr = "SIKUDA;$nomorAnggota;$username"
+        val ukuranPx = resources.getDimensionPixelSize(R.dimen.ukuran_qr)
+        try {
+            binding.imgQr.setImageBitmap(QrCodeGenerator.buatQr(isiQr, ukuranPx))
+            binding.txtIsiQr.text = getString(R.string.qr_isi, nomorAnggota, username)
+        } catch (e: WriterException) {
+            binding.txtIsiQr.setText(R.string.qr_gagal)
+        }
     }
 
     override fun onDestroyView() {

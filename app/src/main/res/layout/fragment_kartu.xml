@@ -119,12 +119,24 @@
                         android:layout_height="wrap_content"
                         android:text="@string/kartu_qr_judul" />
 
+                    <!-- Diisi Bitmap QR dari QrCodeGenerator (ZXing) -->
                     <ImageView
+                        android:id="@+id/imgQr"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="@string/desc_qr"
-                        android:src="@drawable/ic_qr_anggota" />
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/txtIsiQr"
+                        style="@style/Teks.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/hijau_tua"
+                        android:textSize="13sp"
+                        tools:text="Isi QR: KUD-LK-0142 · raihan" />
 
                     <TextView
                         style="@style/Teks.Isi"
