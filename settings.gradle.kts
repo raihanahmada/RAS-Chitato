@@ -19,6 +19,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // MPAndroidChart (grafik harga TBS) hanya tersedia di JitPack
+        maven("https://jitpack.io")
     }
 }
 

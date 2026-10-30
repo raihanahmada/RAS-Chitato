@@ -91,6 +91,70 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
+            <!-- Grafik harga TBS (MPAndroidChart) -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Kartu.Putih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Teks.Label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/grafik_judul" />
+
+                        <!-- Pilih rentang: 7 hari / 30 hari -->
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/toggleRentang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:checkedButton="@+id/btn30Hari"
+                            app:selectionRequired="true"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn7Hari"
+                                style="@style/Tombol.Rentang"
+                                android:text="@string/grafik_7h" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn30Hari"
+                                style="@style/Tombol.Rentang"
+                                android:text="@string/grafik_30h" />
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chartHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/txtRingkasGrafik"
+                        style="@style/Teks.Isi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textSize="12sp"
+                        tools:text="Terendah Rp 2.670 · Tertinggi Rp 2.850" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <!-- Ringkasan bulan ini -->
             <LinearLayout
                 android:layout_width="match_parent"

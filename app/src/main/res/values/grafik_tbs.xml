@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fitur Grafik Harga TBS (MPAndroidChart) -->
+    <string name="grafik_judul">Grafik Harga TBS</string>
+    <string name="grafik_7h">7H</string>
+    <string name="grafik_30h">30H</string>
+    <string name="grafik_label">Harga TBS (Rp/kg)</string>
+    <string name="grafik_ringkas">Terendah Rp %1$s · Tertinggi Rp %2$s</string>
+
+    <!-- Tombol kecil pemilih rentang grafik -->
+    <style name="Tombol.Rentang" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:minWidth">52dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/warna_tombol_rentang</item>
+        <item name="backgroundTint">@color/latar_tombol_rentang</item>
+        <item name="strokeColor">@color/garis</item>
+    </style>
+</resources>

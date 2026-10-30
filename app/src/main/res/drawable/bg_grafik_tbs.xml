@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Isi area di bawah garis grafik: hijau muda memudar ke bawah -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:endColor="#0016A34A"
+        android:startColor="#6616A34A" />
+</shape>
